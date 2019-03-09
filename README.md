@@ -8,8 +8,8 @@
 # installation
 1. git clone https://github.com/DmitryOb/yii2-blog.git
 2. composer install
-2. create DB name like "yii2basic"
-3. config DB in /config/db.php
-4. run migrate in terminal:
-php yii migrate/down all --interactive=0
-php yii migrate --interactive=0
+3. create DB name like "yii2basic"
+4. config DB in /config/db.php
+5. run migrate in terminal:
+6. php yii migrate/down all --interactive=0
+7. php yii migrate --interactive=0

@@ -5,7 +5,7 @@
             <div class="col-md-8">
                 <article class="post">
                     <div class="post-thumb">
-                        <a href="blog.html"><img src="public/images/blog-1.jpg" alt=""></a>
+                        <a href="blog.html"><img src="/public/images/blog-1.jpg" alt=""></a>
 
                         <a href="blog.html" class="post-thumb-overlay text-center">
                             <div class="text-uppercase text-center">View Post</div>
@@ -41,7 +41,7 @@
                 </article>
                 <article class="post">
                     <div class="post-thumb">
-                        <a href="blog.html"><img src="public/images/abc.jpg" alt=""></a>
+                        <a href="blog.html"><img src="/public/images/abc.jpg" alt=""></a>
 
                         <a href="blog.html" class="post-thumb-overlay text-center">
                             <div class="text-uppercase text-center">View Post</div>
@@ -77,7 +77,7 @@
                 </article>
                 <article class="post">
                     <div class="post-thumb">
-                        <a href="blog.html"><img src="public/images/blog-2.jpg" alt=""></a>
+                        <a href="blog.html"><img src="/public/images/blog-2.jpg" alt=""></a>
 
                         <a href="blog.html" class="post-thumb-overlay text-center">
                             <div class="text-uppercase text-center">View Post</div>
@@ -113,7 +113,7 @@
                 </article>
                 <article class="post">
                     <div class="post-thumb">
-                        <a href="blog.html"><img src="public/images/blog-3.jpg" alt=""></a>
+                        <a href="blog.html"><img src="/public/images/blog-3.jpg" alt=""></a>
 
                         <a href="blog.html" class="post-thumb-overlay text-center">
                             <div class="text-uppercase text-center">View Post</div>
@@ -150,7 +150,7 @@
 
                 <article class="post">
                     <div class="post-thumb">
-                        <a href="blog.html"><img src="public/images/blog-4.jpg" alt=""></a>
+                        <a href="blog.html"><img src="/public/images/blog-4.jpg" alt=""></a>
 
                         <a href="blog.html" class="post-thumb-overlay text-center">
                             <div class="text-uppercase text-center">View Post</div>
@@ -201,7 +201,7 @@
                         <div class="popular-post">
 
 
-                            <a href="#" class="popular-img"><img src="public/images/p1.jpg" alt="">
+                            <a href="#" class="popular-img"><img src="/public/images/p1.jpg" alt="">
 
                                 <div class="p-overlay"></div>
                             </a>
@@ -214,7 +214,7 @@
                         </div>
                         <div class="popular-post">
 
-                            <a href="#" class="popular-img"><img src="public/images/p1.jpg" alt="">
+                            <a href="#" class="popular-img"><img src="/public/images/p1.jpg" alt="">
 
                                 <div class="p-overlay"></div>
                             </a>
@@ -227,7 +227,7 @@
                         <div class="popular-post">
 
 
-                            <a href="#" class="popular-img"><img src="public/images/p1.jpg" alt="">
+                            <a href="#" class="popular-img"><img src="/public/images/p1.jpg" alt="">
 
                                 <div class="p-overlay"></div>
                             </a>
@@ -246,7 +246,7 @@
 
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="popular-img"><img src="public/images/r-p.jpg" alt="">
+                                    <a href="#" class="popular-img"><img src="/public/images/r-p.jpg" alt="">
                                         <div class="p-overlay"></div>
                                     </a>
                                 </div>
@@ -261,7 +261,7 @@
 
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="popular-img"><img src="public/images/r-p.jpg" alt="">
+                                    <a href="#" class="popular-img"><img src="/public/images/r-p.jpg" alt="">
                                         <div class="p-overlay"></div>
                                     </a>
                                 </div>
@@ -276,7 +276,7 @@
 
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="popular-img"><img src="public/images/r-p.jpg" alt="">
+                                    <a href="#" class="popular-img"><img src="/public/images/r-p.jpg" alt="">
                                         <div class="p-overlay"></div>
                                     </a>
                                 </div>
@@ -291,7 +291,7 @@
 
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="popular-img"><img src="public/images/r-p.jpg" alt="">
+                                    <a href="#" class="popular-img"><img src="/public/images/r-p.jpg" alt="">
                                         <div class="p-overlay"></div>
                                     </a>
                                 </div>

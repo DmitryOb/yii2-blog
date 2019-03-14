@@ -15,9 +15,7 @@ use app\models\ContactForm;
 
 class SiteController extends Controller
 {
-    /**
-     * {@inheritdoc}
-     */
+
     public function behaviors()
     {
         return [
@@ -41,9 +39,6 @@ class SiteController extends Controller
         ];
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function actions()
     {
         return [
@@ -57,11 +52,6 @@ class SiteController extends Controller
         ];
     }
 
-    /**
-     * Displays homepage.
-     *
-     * @return string
-     */
     public function actionIndex()
     {
 		$data = Article::getAll(1);
@@ -78,11 +68,6 @@ class SiteController extends Controller
 		]);
     }
 
-    /**
-     * Login action.
-     *
-     * @return Response|string
-     */
     public function actionLogin()
     {
         if (!Yii::$app->user->isGuest) {
@@ -100,11 +85,6 @@ class SiteController extends Controller
         ]);
     }
 
-    /**
-     * Logout action.
-     *
-     * @return Response
-     */
     public function actionLogout()
     {
         Yii::$app->user->logout();
@@ -112,11 +92,6 @@ class SiteController extends Controller
         return $this->goHome();
     }
 
-    /**
-     * Displays contact page.
-     *
-     * @return Response|string
-     */
     public function actionContact()
     {
         $model = new ContactForm();
@@ -130,23 +105,41 @@ class SiteController extends Controller
         ]);
     }
 
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
     public function actionAbout()
     {
         return $this->render('about');
     }
 
-    public function actionView()
+    public function actionView($id)
 	{
-		return $this->render('single');
+		$article = Article::findOne($id);
+		$popular = Article::getPopular();
+		$recent = Article::getRecent();
+		$categories = Category::getAll();
+		return $this->render('single', [
+			'article' => $article,
+			'popular' => $popular,
+			'recent' => $recent,
+			'categories' => $categories,
+		]);
 	}
 
-	public function actionCategory()
+	public function actionCategory($id)
 	{
-		return $this->render('category');
+
+		$data = Category::getArticlesByCategory($id);
+
+		$popular = Article::getPopular();
+		$recent = Article::getRecent();
+		$categories = Category::getAll();
+
+		return $this->render('category', [
+			'articles' => $data['articles'],
+			'pagination' => $data['pagination'],
+			'popular' => $popular,
+			'recent' => $recent,
+			'categories' => $categories
+		]);
 	}
+
 }

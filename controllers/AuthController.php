@@ -21,7 +21,7 @@ public function actionLogin()
 	}
 
 	$model->password = '';
-	return $this->render('/site/login', [
+	return $this->render('login', [
 		'model' => $model,
 	]);
 }
@@ -38,13 +38,9 @@ public function actionTest()
 	$user = User::findOne(1);
 	Yii::$app->user->logout();
 	if (Yii::$app->user->isGuest)
-	{
 		echo 'Пользователь гость';
-	}
 	else
-	{
 		echo 'Пользователь авторизован';
-	}
 }
 
 }

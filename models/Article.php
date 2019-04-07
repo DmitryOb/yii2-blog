@@ -92,11 +92,7 @@ class Article extends \yii\db\ActiveRecord
 
 	public function getCategory()
 	{
-		$activeQuery = $this->hasOne(Category::className(), ['id' => 'category_id']);
-		if ($activeQuery->asArray()->all())
-			return $activeQuery;
-		else
-			return false;
+		return $this->hasOne(Category::className(), ['id' => 'category_id']);
 	}
 
 	public function saveCategory($category_id)
@@ -161,7 +157,7 @@ class Article extends \yii\db\ActiveRecord
 
 	public static function getPopular()
 	{
-		return Article::find()->orderBy('viewed desc')->limit(3)->all();
+		return Article::find()->orderBy('viewid desc')->limit(3)->all();
 	}
 
 	public static function getRecent()

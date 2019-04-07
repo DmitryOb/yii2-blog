@@ -151,7 +151,6 @@ class ArticleController extends Controller
 
 	public function actionSetCategory($id)
 	{
-		// $category = Category::findOne(2); // список категорий
 		$article = $this->findModel($id);
 		$selectedCategory = $article->category ? $article->category->id : null;
 		$categories = ArrayHelper::map(Category::find()->all(), 'id', 'title');

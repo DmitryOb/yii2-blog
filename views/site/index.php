@@ -51,7 +51,7 @@ use yii\widgets\LinkPager;
 									By <a href="#">Rubel</a> <?= $article->getDate(); ?>
 								</span>
 								<ul class="text-center pull-right">
-									<li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li><?= (int) $article->viewed ?>
+									<li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li><?= (int) $article->viewid ?>
 								</ul>
 							</div>
 						</div>

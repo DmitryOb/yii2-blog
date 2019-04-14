@@ -13,3 +13,4 @@
 5. run migrate in terminal:
 6. php yii migrate/down all --interactive=0
 7. php yii migrate --interactive=0
+8. go to /admin and create article

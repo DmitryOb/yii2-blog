@@ -19,17 +19,12 @@ use yii\web\IdentityInterface;
  */
 class User extends \yii\db\ActiveRecord implements IdentityInterface
 {
-    /**
-     * {@inheritdoc}
-     */
+
     public static function tableName()
     {
         return 'user';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function rules()
     {
         return [
@@ -38,9 +33,6 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
         ];
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function attributeLabels()
     {
         return [
@@ -53,9 +45,6 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
         ];
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
     public function getComments()
     {
         return $this->hasMany(Comment::className(), ['user_id' => 'id']);
@@ -65,6 +54,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
 	{
 		return User::findOne($id);
 	}
+
 	public function getId()
 	{
 		return $this->id;
@@ -95,5 +85,10 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
 	public function create()
 	{
 		return $this->save(false);
+	}
+
+	public function getImage()
+	{
+		$this->photo;
 	}
 }

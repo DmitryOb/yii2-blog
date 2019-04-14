@@ -26,17 +26,11 @@ use yii\helpers\ArrayHelper;
  */
 class Article extends \yii\db\ActiveRecord
 {
-    /**
-     * {@inheritdoc}
-     */
     public static function tableName()
     {
         return 'article';
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function rules()
     {
         return [
@@ -48,9 +42,6 @@ class Article extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function attributeLabels()
     {
         return [
@@ -157,7 +148,7 @@ class Article extends \yii\db\ActiveRecord
 
 	public static function getPopular()
 	{
-		return Article::find()->orderBy('viewid desc')->limit(3)->all();
+		return Article::find()->orderBy('viewed desc')->limit(3)->all();
 	}
 
 	public static function getRecent()
@@ -169,5 +160,26 @@ class Article extends \yii\db\ActiveRecord
 	{
 		$this->user_id = Yii::$app->user->id;
 		return $this->save();
+	}
+
+	public function getComments()
+	{
+		return $this->hasMany(Comment::className(), ['article_id'=>'id']);
+	}
+
+	public function getArticleComments()
+	{
+		return $this->getComments()->where(['status'=>1])->all();
+	}
+
+	public function getAuthor()
+	{
+		return $this->hasOne(User::className(), ['id'=>'user_id']);
+	}
+
+	public function viewedCounter()
+	{
+		$this->viewed += 1;
+		return $this->save(false);
 	}
 }

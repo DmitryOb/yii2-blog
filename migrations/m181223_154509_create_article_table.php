@@ -19,7 +19,7 @@ class m181223_154509_create_article_table extends Migration
 			'content' => $this->text(),
 			'date' => $this->date(),
 			'image' => $this->string(),
-			'viewid' => $this->integer(),
+			'viewed' => $this->integer(),
 			'user_id' => $this->integer(),
 			'status' => $this->integer(),
 			'category_id' => $this->integer(),

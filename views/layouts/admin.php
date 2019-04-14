@@ -37,6 +37,7 @@ AppAsset::register($this);
 		'items' => [
 			['label' => 'Home', 'url' => ['/admin/default/index']],
 			['label' => 'Articles', 'url' => ['/admin/article/index']],
+			['label' => 'Commentaries', 'url' => ['/admin/comment/index']],
 			['label' => 'Categories', 'url' => ['/admin/category/index']],
 			['label' => 'Tag', 'url' => ['/admin/tag/index']],
 		],
@@ -62,6 +63,24 @@ AppAsset::register($this);
 </footer>
 
 <?php $this->endBody() ?>
+<?php $this->registerJsFile('/ckeditor/ckeditor.js');?>
+<?php $this->registerJsFile('/ckfinder/ckfinder.js');?>
+<script>
+    $(document).ready(function () {
+        var allEditors = document.querySelectorAll('textarea');
+        for (var i = 0; i < allEditors.length; ++i) {
+            ClassicEditor
+                .create( allEditors[i], {
+                    ckfinder: {
+                        uploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json',
+                    },
+                } )
+                .catch( error => {
+                    console.error( error );
+                } );
+        }
+    })
+</script>
 </body>
 </html>
 <?php $this->endPage() ?>
